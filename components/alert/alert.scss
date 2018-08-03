@@ -2,7 +2,15 @@
     padding: 10px;
     border: 1px solid dashed #000;
     border-radius: 10px;
-    background-color: orange;
+    background-color: #ccc;
     color: white;
     font-family: sans-serif;
+}
+
+.alert--warning {
+    background-color: orange;
+}
+
+.alert--success {
+    background-color: green;
 }

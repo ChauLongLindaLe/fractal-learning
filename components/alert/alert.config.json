@@ -1,0 +1,27 @@
+{
+    "title": "Alert banner",
+    "status": "wip",
+    "context": {
+        "modifier": "default",
+        "heading": "Hello World!",
+        "text": "I am the default"
+    },
+    "variants": [
+        {
+            "name": "warning",
+            "context": {
+                "modifier": "warning",
+                "heading": "This is your final warning",
+                "text": "These are not the droids your looking for"
+            }
+        },
+        {
+            "name": "success",
+            "context": {                
+                "modifier": "success",
+                "heading": "You have paid your bills!",
+                "text": "Go have some fun"
+            }
+        }
+    ]
+}
