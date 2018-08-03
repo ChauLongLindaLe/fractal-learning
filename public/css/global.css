@@ -1,0 +1,10 @@
+.alert {
+  padding: 10px;
+  border: 1px solid dashed #000;
+  border-radius: 10px;
+  background-color: orange;
+  color: white;
+  font-family: sans-serif; }
+
+h1 {
+  color: rebeccapurple; }

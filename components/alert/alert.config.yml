@@ -1,3 +1,4 @@
-title: Example component
+title: Alert box
 context:
-    text: Don't cross the streams!
+    heading: Warning
+    text: Your not autorized to see this!

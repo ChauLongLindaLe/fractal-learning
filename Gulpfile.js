@@ -10,17 +10,17 @@ const notify = require('gulp-notify');
 const path = require('path');
 
 gulp.task('sass', function () {
-    return gulp.src('./scss/**/*.scss')
+    return gulp.src('assets/scss/**/*.scss')
         .pipe(customPlumber('Error running Sass'))
         .pipe(sassGlob())
         .pipe(sass())
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('public/css'))
 });
 
 gulp.task('watch', ['sass'], function () {
     gulp.watch([
-        './components/**/*.scss',
-        './scss/**/*.scss'
+        'components/**/*.scss',
+        'assets/scss/**/*.scss'
     ], ['sass']);
 });
 
