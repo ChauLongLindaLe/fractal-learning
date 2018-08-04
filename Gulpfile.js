@@ -10,12 +10,6 @@ const concat = require('gulp-concat');
 const notify = require('gulp-notify');
 const path = require('path');
 
-gulp.task('js', function() {
-    return gulp.src('components/**/*.js')
-        .pipe(concat('scripts.js'))
-        .pipe(gulp.dest('public/js'))
-});
-
 gulp.task('sass', function () {
     return gulp.src('assets/scss/**/*.scss')
         .pipe(customPlumber('Error running Sass'))
@@ -29,10 +23,6 @@ gulp.task('watch', ['sass', 'js'], function () {
         'components/**/*.scss',
         'assets/scss/**/*.scss'
     ], ['sass']);
-
-    gulp.watch([
-        'components/**/*.js'
-    ], ['js']);
 });
 
 function customPlumber(errTitle) {
