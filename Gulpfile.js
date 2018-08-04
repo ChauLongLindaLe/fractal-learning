@@ -11,9 +11,12 @@ const notify = require('gulp-notify');
 const path = require('path');
 
 gulp.task('sass', function () {
-    return gulp.src('./assets/scss/**/*.scss')
+    return gulp.src([
+            './assets/**/*.scss',
+            './components/**/*.scss'
+        ])
         .pipe(customPlumber('Error running Sass'))
-        .pipe(sassGlob())
+        .pipe(concat('global.scss'))
         .pipe(sass())
         .pipe(gulp.dest('./public/css'))
 });

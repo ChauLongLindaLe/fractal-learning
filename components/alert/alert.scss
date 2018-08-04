@@ -3,12 +3,18 @@
 // ---------------------------------------------
 
 .alert {
+    margin-top: 0;
     padding: 10px;
-    border: 1px solid dashed #000;
-    border-radius: 10px;
-    background-color: #ccc;
     color: white;
-    font-family: sans-serif;
+    border-radius: 10px;
+    font-family: sans-serif;    
+    font-size: 16px;
+    border: 1px solid dashed #000;
+    background-color: #ccc;
+
+    @include respond-to-min('tablet') {
+        font-size: 28px;
+    }
 }
 
 // ---------------------------------------------
@@ -16,7 +22,7 @@
 // ---------------------------------------------
 
 .alert--warning {
-    background-color: orange;
+    background-color: map-get($colors, 01);
 }
 
 .alert--success {
