@@ -1,6 +1,8 @@
-# Learning about Fractal
+# Learning about Fractal.build pattern library
 
-Creating a component library by learning [Fractal.build](https://fractal.build/). Inspired by https://www.smashingmagazine.com/2018/07/pattern-library-first-css/
+Learning about [Fractal.build](https://fractal.build/) pattern library. Inspired by https://www.smashingmagazine.com/2018/07/pattern-library-first-css/
+
+This demo project is available at https://fractal-learning.dutchwebworks.nl/
 
 *By Dennis Burger, august 2018*
 
@@ -21,7 +23,7 @@ npm install
 
 ## Development
 
-Below is the command to start a local development server on http://localhost:3000
+Below is the command to start a local development server on http://localhost:3000. This starts a **Gulp watcher** for `*.hbs` (handle bar templates), `*.scss` for Sass to CSS and a JavaScript watcher.
 
 ```bash
 npm run dev
@@ -37,4 +39,10 @@ The build command below will build al static version (ready for Github Pages) of
 npm run build
 ```
 
-This `docs/` directory is available on http://fractal-learning.dutchwebworks.nl.
+This `docs/` directory is available on https://fractal-learning.dutchwebworks.nl.
+
+## More example uses of Fractal.build pattern library
+
+* [patterns.perchcms.com](http://patterns.perchcms.com/), the pattern library for the [Perch CMS](https://grabaperch.com/)
+* [bits.24ways.org](http://bits.24ways.org/), pattern library for [24ways.org](https://24ways.org/)
+* [Smasching Fractal](https://github.com/rachelandrew/smashing-fractal), demo site by Rachel Andrew from the article in above intro
