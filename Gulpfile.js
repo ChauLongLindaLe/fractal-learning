@@ -21,11 +21,21 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./public/css'))
 });
 
-gulp.task('watch', ['sass'], function () {
+gulp.task('js', function(){
+    return gulp.src('./assets/js/**/*.js')
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest('./public/js'))
+});
+
+gulp.task('watch', ['sass', 'js'], function () {
     gulp.watch([
         './components/**/*.scss',
         './assets/scss/**/*.scss'
     ], ['sass']);
+
+    gulp.watch([
+        './assets/js/**/*.js'
+    ], ['js']);
 });
 
 function customPlumber(errTitle) {
@@ -47,4 +57,4 @@ gulp.task('fractal:start', function () {
     });
 });
 
-gulp.task('default', ['fractal:start', 'sass', 'watch']);
+gulp.task('default', ['fractal:start', 'sass', 'js', 'watch']);
