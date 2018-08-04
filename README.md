@@ -24,7 +24,7 @@ npm install
 Below is the command to start a local development server on http://localhost:3000
 
 ```bash
-fractal start --sync
+npm run dev
 ```
 
 ## Build for production
@@ -34,7 +34,7 @@ The settings for this Fractal build example project are different than it's defa
 The build command below will build al static version (ready for Github Pages) of this project to the `docs/` directory.
 
 ```bash
-fractal build
+npm run build
 ```
 
 This `docs/` directory is available on http://fractal-learning.dutchwebworks.nl.
