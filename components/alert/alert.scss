@@ -1,3 +1,7 @@
+// ---------------------------------------------
+// Block
+// ---------------------------------------------
+
 .alert {
     padding: 10px;
     border: 1px solid dashed #000;
@@ -7,10 +11,22 @@
     font-family: sans-serif;
 }
 
+// ---------------------------------------------
+// Element
+// ---------------------------------------------
+
 .alert--warning {
     background-color: orange;
 }
 
 .alert--success {
     background-color: green;
+}
+
+// ---------------------------------------------
+// Modifier
+// ---------------------------------------------
+
+.alert_message--hidden {
+    display: none;
 }

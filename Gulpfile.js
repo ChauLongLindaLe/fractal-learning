@@ -6,8 +6,15 @@ const logger = fractal.cli.console;
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const plumber = require('gulp-plumber');
+const concat = require('gulp-concat');
 const notify = require('gulp-notify');
 const path = require('path');
+
+gulp.task('js', function() {
+    return gulp.src('components/**/*.js')
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest('public/js'))
+});
 
 gulp.task('sass', function () {
     return gulp.src('assets/scss/**/*.scss')
@@ -17,11 +24,15 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('public/css'))
 });
 
-gulp.task('watch', ['sass'], function () {
+gulp.task('watch', ['sass', 'js'], function () {
     gulp.watch([
         'components/**/*.scss',
         'assets/scss/**/*.scss'
     ], ['sass']);
+
+    gulp.watch([
+        'components/**/*.js'
+    ], ['js']);
 });
 
 function customPlumber(errTitle) {
@@ -43,4 +54,4 @@ gulp.task('fractal:start', function () {
     });
 });
 
-gulp.task('default', ['fractal:start', 'sass', 'watch']);
+gulp.task('default', ['fractal:start', 'sass', 'js', 'watch']);

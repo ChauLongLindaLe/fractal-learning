@@ -12,5 +12,8 @@
 .alert--success {
   background-color: green; }
 
+.alert_message--hidden {
+  display: none; }
+
 h1 {
   color: rebeccapurple; }
