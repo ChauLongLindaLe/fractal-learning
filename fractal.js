@@ -10,6 +10,16 @@ const path = require('path');
  */
 const fractal = module.exports = require('@frctl/fractal').create();
 
+const mandelbrot = require('@frctl/mandelbrot'); // require the Mandelbrot theme module
+
+// create a new instance with custom config options
+const myCustomisedTheme = mandelbrot({
+    skin: "orange",
+    nav: ["docs", "components"]
+});
+
+fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default
+
 /*
  * Give your project a title.
  */

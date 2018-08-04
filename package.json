@@ -6,7 +6,8 @@
     "build": "fractal build"
   },
   "dependencies": {
-    "@frctl/fractal": "^1.1.7"
+    "@frctl/fractal": "^1.1.7",
+    "@frctl/mandelbrot": "^1.2.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
