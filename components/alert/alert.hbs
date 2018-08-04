@@ -3,6 +3,8 @@
     <h2 class="alert__title">{{ heading }}</h2>
 
     <p class="alert__body">
+        <img src="{{ path '/img/warning-triangle.svg' }}" width="25" height="25" alt="Warning">
+
         {{ text }}
     </p>
 
@@ -11,7 +13,7 @@
     </p>
 
     <p class="alert__nav">
-        <button id="js-alert__button" class="alert__button">Toggle hidden paragraph</button>
+        <button id="js-alert__button" class="alert__button">Show hidden paragraph</button>
     </p>
 </div>
 <!-- End: component HTML -->

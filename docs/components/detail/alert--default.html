@@ -157,11 +157,12 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-9bd8afa5489d180d6a249ee58e44a554-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert--default"</span>&gt;</span>
+        <pre><span class="hljs-comment">&lt;!-- Start: component HTML --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert--default"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__title"</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__body"</span>&gt;</span>
-        I am the default
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../img/warning-triangle.svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Warning"</span>&gt;</span> I am the default
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert__message"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__message alert_message--hidden"</span>&gt;</span>
@@ -169,15 +170,18 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__nav"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert__button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__button"</span>&gt;</span>Toggle hidden paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert__button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__button"</span>&gt;</span>Show hidden paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- End: component HTML --&gt;</span>
 
+<span class="hljs-comment">&lt;!-- Start: component scripts --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
     <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"js-alert__button"</span>).addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
         <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"js-alert__message"</span>).style.display = <span class="hljs-string">"block"</span>;
     });
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- End: component scripts --&gt;</span></pre>
         
     </code>
 </div>
@@ -185,10 +189,13 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-9bd8afa5489d180d6a249ee58e44a554-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert--</span></span></span><span class="hljs-template-variable">{{ modifier }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-comment">&lt;!-- Start: component HTML --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert--</span></span></span><span class="hljs-template-variable">{{ modifier }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__title"</span>&gt;</span></span><span class="hljs-template-variable">{{ heading }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__body"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path '/img/warning-triangle.svg' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Warning"</span>&gt;</span>
+
         </span><span class="hljs-template-variable">{{ text }}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
@@ -197,15 +204,18 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__nav"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert__button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__button"</span>&gt;</span>Toggle hidden paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert__button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__button"</span>&gt;</span>Show hidden paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- End: component HTML --&gt;</span>
 
+<span class="hljs-comment">&lt;!-- Start: component scripts --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
     <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"js-alert__button"</span>).addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
         <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"js-alert__message"</span>).style.display = <span class="hljs-string">"block"</span>;
     });
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- End: component scripts --&gt;</span></span></pre>
     </code>
 </div>
 

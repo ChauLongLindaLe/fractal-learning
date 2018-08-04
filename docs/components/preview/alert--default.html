@@ -11,10 +11,13 @@
 </head>
 
 <body>
-    <div id="js-alert" class="alert alert--default">
+    <!-- Start: component HTML -->
+<div id="js-alert" class="alert alert--default">
     <h2 class="alert__title">Hello World!</h2>
 
     <p class="alert__body">
+        <img src="../../img/warning-triangle.svg" width="25" height="25" alt="Warning">
+
         I am the default
     </p>
 
@@ -23,15 +26,18 @@
     </p>
 
     <p class="alert__nav">
-        <button id="js-alert__button" class="alert__button">Toggle hidden paragraph</button>
+        <button id="js-alert__button" class="alert__button">Show hidden paragraph</button>
     </p>
 </div>
+<!-- End: component HTML -->
 
+<!-- Start: component scripts -->
 <script>
     document.getElementById("js-alert__button").addEventListener("click", function () {
         document.getElementById("js-alert__message").style.display = "block";
     });
 </script>
+<!-- End: component scripts -->
 
     <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
     <script src="../../js/scripts.js"></script>
