@@ -10,10 +10,10 @@
     font-family: sans-serif;    
     font-size: 16px;
     border: 1px solid dashed #000;
-    background-color: #ccc;
+    background-color: #ddd;
 
     @include respond-to-min('tablet') {
-        font-size: 28px;
+        background-color: #bbb;
     }
 }
 

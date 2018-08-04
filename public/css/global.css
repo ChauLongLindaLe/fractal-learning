@@ -6,10 +6,10 @@
   font-family: sans-serif;
   font-size: 16px;
   border: 1px solid dashed #000;
-  background-color: #ccc; }
+  background-color: #ddd; }
   @media (min-width: 600px) {
     .alert {
-      font-size: 28px; } }
+      background-color: #bbb; } }
 
 .alert--warning {
   background-color: #ccc; }
