@@ -15,5 +15,15 @@
 .alert_message--hidden {
   display: none; }
 
-h1 {
-  color: rebeccapurple; }
+.movie-list {
+  font-family: sans-serif; }
+
+.movie-list__body {
+  font-size: 22px; }
+
+.movie-list__table th {
+  text-align-last: left;
+  border-bottom: 2px solid #ddd; }
+
+.movie-list__table td {
+  padding: 10px 20px 10px 0; }

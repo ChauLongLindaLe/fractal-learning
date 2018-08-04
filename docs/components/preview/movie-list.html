@@ -1,0 +1,76 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Preview Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../../css/global.css">
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- Start: component HTML -->
+<div id="movie-list" class="movie-list">
+    <h1 class="movie-list__title">Testing Vue in Fractal</h1>
+
+    <p class="movie-list__body">Using Vue library</p>
+
+    <p class="movie-list__body">Vue data property: {{ message }}</p>
+
+    <table cellspacing="0" class="movie-list__table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr 
+                v-for="(movie, index) in movies"
+                v-bind:key="index">
+                <td>{{ movie.name }}</td>
+                <td>{{ movie.genre }}</td>
+                <td>{{ movie.rating }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- End: component HTML -->
+
+<!-- Start: component scripts -->
+<script>
+    var movieApp = new Vue({
+        el: "#movie-list",
+        data: {
+            message: "Hello from Vue",
+            movies: [
+                {
+                    name: "Solo: A Star Wars story",
+                    genre: "Sci-Fi",
+                    year: 2018,
+                    rating: 9.5
+                },
+                {
+                    name: "Star Wars: A New Hope",
+                    genre: "Sci-Fi",
+                    year: 1984,
+                    rating: 8.3
+                },
+                {
+                    name: "Hereditary",
+                    genre: "Horror",
+                    year: 2018,
+                    rating: 9
+                }
+            ]
+        }
+    });
+</script>
+<!-- End: component scripts -->    
+    <script src="../../js/scripts.js"></script>
+</body>
+</html>

@@ -11,17 +11,17 @@ const notify = require('gulp-notify');
 const path = require('path');
 
 gulp.task('sass', function () {
-    return gulp.src('assets/scss/**/*.scss')
+    return gulp.src('./assets/scss/**/*.scss')
         .pipe(customPlumber('Error running Sass'))
         .pipe(sassGlob())
         .pipe(sass())
-        .pipe(gulp.dest('public/css'))
+        .pipe(gulp.dest('./public/css'))
 });
 
-gulp.task('watch', ['sass', 'js'], function () {
+gulp.task('watch', ['sass'], function () {
     gulp.watch([
-        'components/**/*.scss',
-        'assets/scss/**/*.scss'
+        './components/**/*.scss',
+        './assets/scss/**/*.scss'
     ], ['sass']);
 });
 
@@ -44,4 +44,4 @@ gulp.task('fractal:start', function () {
     });
 });
 
-gulp.task('default', ['fractal:start', 'sass', 'js', 'watch']);
+gulp.task('default', ['fractal:start', 'sass', 'watch']);
