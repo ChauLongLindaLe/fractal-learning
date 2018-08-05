@@ -16,11 +16,16 @@
 
 .movie-list__table {
     th {
+        font-size: 22px;
+        font-weight: 400;
+        padding-bottom: 5px;
+        color: map-get($colors, 02);
         text-align-last: left;
-        border-bottom: 2px solid #ddd;
+        border-bottom: 2px solid map-get($colors, 01);
     }
 
     td {
+        font-size: 18px;
         padding: 10px 20px 10px 0;
     }
 }

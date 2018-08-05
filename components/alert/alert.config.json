@@ -1,5 +1,6 @@
 {
     "title": "Alert banner",
+    "handle": "alert",
     "status": "wip",
     "context": {
         "modifier": "default",
@@ -8,7 +9,7 @@
     },
     "variants": [
         {
-            "name": "warning",
+            "name": "warning",            
             "context": {
                 "modifier": "warning",
                 "heading": "This is your final warning",

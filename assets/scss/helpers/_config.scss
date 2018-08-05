@@ -3,8 +3,25 @@
 // ---------------------------------------------
 
 $colors: (
-    01: orange,
+	01: deepskyblue,
+	02: deeppink,
+	03: #444,
+	04: #ccc,
+	05: #eee,
+	06: black,
 );
+
+// Mapped to main colors
+$color-title: map-get($colors, 01);
+$color-sub-title: map-get($colors, 02);
+$color-body: map-get($colors, 03);
+
+// ---------------------------------------------
+// Fonts
+// ---------------------------------------------
+
+$font-default: Arial, sans-serif;
+$font-custom: "Roboto", #{$font-default};
 
 // ---------------------------------------------
 // Paths
@@ -25,4 +42,4 @@ $breakpoints: (
 // Vars
 // ---------------------------------------------
 
-
+$border-radius: 8px;

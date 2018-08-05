@@ -5,28 +5,37 @@
 .alert {
     margin-top: 0;
     padding: 10px;
-    color: white;
-    border-radius: 10px;
+    border-radius: $border-radius;
     font-family: sans-serif;    
     font-size: 16px;
-    border: 1px solid dashed #000;
-    background-color: #ddd;
-
-    @include respond-to-min('tablet') {
-        background-color: #bbb;
-    }
+    border: 3px solid map-get($colors, 03);
 }
 
 // ---------------------------------------------
 // Element
 // ---------------------------------------------
 
+.alert__title {
+    color: map-get($colors, 03);
+	font-size: 32px;
+	font-weight: 300;
+	font-family: $font-custom;
+}
+
 .alert--warning {
-    background-color: map-get($colors, 01);
+    border-color: map-get($colors, 02);
+
+    .alert__title {
+        color: map-get($colors, 02);
+    }
 }
 
 .alert--success {
-    background-color: green;
+    border-color: map-get($colors, 01);
+
+    .alert__title {
+        color: map-get($colors, 01);
+    }
 }
 
 // ---------------------------------------------
@@ -35,4 +44,8 @@
 
 .alert_message--hidden {
     display: none;
+    
+    &.is-active {
+        display: block;
+    }
 }

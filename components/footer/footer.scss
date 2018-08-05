@@ -1,0 +1,30 @@
+// ---------------------------------------------
+// Block
+// ---------------------------------------------
+
+.footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid map-get($colors, 02);
+}
+
+// ---------------------------------------------
+// Element
+// ---------------------------------------------
+
+.footer__title {
+    font-family: sans-serif;
+    color: map-get($colors, 02);
+}
+
+.footer__copyright {
+    color: map-get($colors, 04);
+    font-family: sans-serif;
+}
+
+// ---------------------------------------------
+// Modifier
+// ---------------------------------------------
+
+
+

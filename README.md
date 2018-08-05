@@ -44,5 +44,5 @@ This `docs/` directory is available on https://fractal-learning.dutchwebworks.nl
 ## More example uses of Fractal.build pattern library
 
 * [patterns.perchcms.com](http://patterns.perchcms.com/), the pattern library for the [Perch CMS](https://grabaperch.com/)
-* [bits.24ways.org](http://bits.24ways.org/), pattern library for [24ways.org](https://24ways.org/)
+* [24ways.org](https://24ways.org/): their patter library called [bits.24ways.org](http://bits.24ways.org/), here's their [Fractal source code on Github](https://github.com/24ways/frontend)
 * [Smasching Fractal](https://github.com/rachelandrew/smashing-fractal), demo site by Rachel Andrew from the article in above intro

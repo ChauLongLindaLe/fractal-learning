@@ -1,0 +1,41 @@
+// ---------------------------------------------
+// Block
+// ---------------------------------------------
+
+.detail {
+    @include display-grid;
+    @include grid-template-columns(400px 25px 400px);
+}
+
+// ---------------------------------------------
+// Element
+// ---------------------------------------------
+
+.detail__title {
+    margin: 0 0 20px 0;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: deeppink;
+}
+
+.detail__intro {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.detail__main {
+    @include grid-column(1);
+}
+
+.detail__side {
+    @include grid-column(3);
+}
+
+// ---------------------------------------------
+// Modifier
+// ---------------------------------------------
+
+
+

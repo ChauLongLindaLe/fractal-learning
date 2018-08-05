@@ -1,11 +1,5 @@
 <!-- Start: component HTML -->
 <div id="movie-list" class="movie-list">
-    <h1 class="movie-list__title">Testing Vue in Fractal</h1>
-
-    <p class="movie-list__body">Using Vue library</p>
-
-    <p class="movie-list__body">Vue data property: \{{ message }}</p>
-
     <table cellspacing="0" class="movie-list__table">
         <thead>
             <tr>
@@ -32,7 +26,6 @@
     var movieApp = new Vue({
         el: "#movie-list",
         data: {
-            message: "Hello from Vue",
             movies: [
                 {
                     name: "Solo: A Star Wars story",

@@ -23,7 +23,7 @@ fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured them
 /*
  * Give your project a title.
  */
-fractal.set('project.title', 'Fractal Learning');
+fractal.set('project.title', 'Dutchwebworks component library');
 
 /*
  * Tell Fractal where to look for components.

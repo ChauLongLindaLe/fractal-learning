@@ -1,0 +1,101 @@
+
+
+<h1 class="detail__title">This is the detail page</h1>
+
+<p class="detail__intro">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam itaque atque possimus! Quo quaerat perferendis quam culpa in ducimus nesciunt.
+</p>
+
+<section class="detail">
+    <main class="detail__main">        
+        <!-- Start: component HTML -->
+<div id="movie-list" class="movie-list">
+    <table cellspacing="0" class="movie-list__table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr 
+                v-for="(movie, index) in movies"
+                v-bind:key="index">
+                <td>{{ movie.name }}</td>
+                <td>{{ movie.genre }}</td>
+                <td>{{ movie.rating }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- End: component HTML -->
+
+<!-- Start: component scripts -->
+<script>
+    var movieApp = new Vue({
+        el: "#movie-list",
+        data: {
+            movies: [
+                {
+                    name: "Solo: A Star Wars story",
+                    genre: "Sci-Fi",
+                    year: 2018,
+                    rating: 9.5
+                },
+                {
+                    name: "Star Wars: A New Hope",
+                    genre: "Sci-Fi",
+                    year: 1984,
+                    rating: 8.3
+                },
+                {
+                    name: "Hereditary",
+                    genre: "Horror",
+                    year: 2018,
+                    rating: 9
+                }
+            ]
+        }
+    });
+</script>
+<!-- End: component scripts -->
+    </main>
+
+    <aside class="detail__side">
+        <!-- Start: component HTML -->
+<div id="js-alert" class="alert alert--default">
+    <h2 class="alert__title">Hello World!</h2>
+
+    <p class="alert__body">This component is using Handlebar templating</p>
+
+    <p class="alert__body">
+        <img src="../../img/warning-triangle.svg" width="25" height="25" alt="Warning">
+
+        I am the default
+    </p>
+
+    <p id="js-alert__message" class="alert__message alert_message--hidden">
+        This is hidden text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, ducimus!
+    </p>
+
+    <p class="alert__nav">
+        <button id="js-alert__button" class="alert__button">Toggle hidden paragraph</button>
+    </p>
+</div>
+<!-- End: component HTML -->
+
+<!-- Start: component scripts -->
+<script>
+    document.getElementById("js-alert__button").addEventListener("click", function () {
+        document.getElementById("js-alert__message").classList.toggle("is-active");
+    });
+</script>
+<!-- End: component scripts -->
+    </aside>
+</section>
+
+<footer class="footer">
+    <h3 class="footer__title">This is our lovely footer</h3>
+    <p class="footer__copyright">&copy; 2018 Dutchwebworks</p>
+</footer>

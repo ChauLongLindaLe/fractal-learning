@@ -1,0 +1,8 @@
+{
+    "title": "Detail page",
+    "status": "ready",
+    "context": {
+        "heading": "This is the detail page",
+        "intro": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam itaque atque possimus! Quo quaerat perferendis quam culpa in ducimus nesciunt."
+    }
+}

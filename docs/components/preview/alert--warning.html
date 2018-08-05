@@ -29,7 +29,7 @@
     </p>
 
     <p class="alert__nav">
-        <button id="js-alert__button" class="alert__button">Show hidden paragraph</button>
+        <button id="js-alert__button" class="alert__button">Toggle hidden paragraph</button>
     </p>
 </div>
 <!-- End: component HTML -->
@@ -37,7 +37,7 @@
 <!-- Start: component scripts -->
 <script>
     document.getElementById("js-alert__button").addEventListener("click", function () {
-        document.getElementById("js-alert__message").style.display = "block";
+        document.getElementById("js-alert__message").classList.toggle("is-active");
     });
 </script>
 <!-- End: component scripts -->    

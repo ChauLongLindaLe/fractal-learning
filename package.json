@@ -1,6 +1,11 @@
 {
   "name": "fractal-learning",
   "version": "0.1.0",
+  "keywords": [
+    "styleguide",
+    "patterns",
+    "library"
+  ],
   "scripts": {
     "dev": "gulp",
     "build": "fractal build"

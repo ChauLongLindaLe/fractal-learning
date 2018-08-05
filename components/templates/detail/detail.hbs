@@ -1,0 +1,17 @@
+<h1 class="detail__title">{{ heading }}</h1>
+
+<p class="detail__intro">
+    {{ intro }}
+</p>
+
+<section class="detail">
+    <main class="detail__main">        
+        {{ render '@movie-list' }}
+    </main>
+
+    <aside class="detail__side">
+        {{ render '@alert' }}
+    </aside>
+</section>
+
+{{ render '@footer' }}
