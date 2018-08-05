@@ -5,14 +5,16 @@
 </p>
 
 <section class="detail">
-    <main class="detail__main">        
+    <main class="detail__main">  
+        {{ render '@action-list' }}
+
         {{ render '@movie-list' }}
     </main>
 
     <aside class="detail__side">
         {{ render '@alert' }}
-        {{ render '@alert--warning' }}
-        
+
+        {{ render '@alert--warning' }}        
     </aside>
 </section>
 

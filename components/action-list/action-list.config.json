@@ -1,0 +1,19 @@
+{
+    "title": "Action list",
+    "context": {
+        "users": [
+            {
+                "name": "Hank McCoy",
+                "email": "hank.mccoy@xmen.com"
+            },
+            {
+                "name": "Cyclops",
+                "email": "cyclops@xmen.com"
+            },
+            {
+                "name": "Wolverine",
+                "email": "claws@xmen.com"
+            }
+        ]
+    }
+}

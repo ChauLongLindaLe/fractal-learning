@@ -4,7 +4,7 @@
 
 .detail {
     @include display-grid;
-    @include grid-template-columns(400px 25px 400px);
+    @include grid-template-columns(500px 25px 500px);
 }
 
 // ---------------------------------------------

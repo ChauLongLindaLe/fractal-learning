@@ -76,38 +76,37 @@
 <h2 id="here-is-an-example-of-the-new-component">Here is an example of the new component</h2>
 <p>Here’s the rendered version</p>
 <code><pre><span class="xml"><span class="hljs-comment">&lt;!-- Start: component HTML --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert--</span></span></span><span class="hljs-template-variable">{{ modifier }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__title"</span>&gt;</span></span><span class="hljs-template-variable">{{ heading }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action-list"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action-list__title"</span>&gt;</span>Our heroes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__body"</span>&gt;</span>This component is using Handlebar templating<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__body"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path '/img/warning-triangle.svg' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Warning"</span>&gt;</span>
-
-        </span><span class="hljs-template-variable">{{ text }}</span><span class="xml">
-    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert__message"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__message alert_message--hidden"</span>&gt;</span>
-        This is hidden text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, ducimus!
-    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__nav"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert__button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__button"</span>&gt;</span>Toggle hidden paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action-list__list"</span>&gt;</span>
+        </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> users }}</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action-list__item"</span>&gt;</span></span><span class="hljs-template-variable">{{ name }}</span><span class="xml">: </span><span class="hljs-template-variable">{{ email }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> }}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- End: component HTML --&gt;</span>
 
 <span class="hljs-comment">&lt;!-- Start: component scripts --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"js-alert__button"</span>).addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-        <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"js-alert__message"</span>).classList.toggle(<span class="hljs-string">"is-active"</span>);
-    });
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
+
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- End: component scripts --&gt;</span></span></pre></code><p>And here it’s context</p>
 <code><pre>{
-    <span class="hljs-attr">"modifier"</span>: <span class="hljs-string">"default"</span>,
-    <span class="hljs-attr">"heading"</span>: <span class="hljs-string">"Hello World!"</span>,
-    <span class="hljs-attr">"text"</span>: <span class="hljs-string">"I am the default"</span>
+    <span class="hljs-attr">"users"</span>: [
+        {
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Hank McCoy"</span>,
+            <span class="hljs-attr">"email"</span>: <span class="hljs-string">"hank.mccoy@xmen.com"</span>
+        },
+        {
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Cyclops"</span>,
+            <span class="hljs-attr">"email"</span>: <span class="hljs-string">"cyclops@xmen.com"</span>
+        },
+        {
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wolverine"</span>,
+            <span class="hljs-attr">"email"</span>: <span class="hljs-string">"claws@xmen.com"</span>
+        }
+    ]
 }</pre></code>
     
 
@@ -161,6 +160,30 @@
 <div class="Tree" data-behaviour="tree" id="tree-components">
     <h3 class="Tree-title">components</h3>
     <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/action-list.html" data-pjax>
+                <span>Action List</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
         
     
         

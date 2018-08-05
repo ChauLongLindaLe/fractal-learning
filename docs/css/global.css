@@ -1,3 +1,14 @@
+.action-list__title {
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: deeppink; }
+
+.action-list__item {
+  font-family: sans-serif;
+  font-size: 22px;
+  color: deepskyblue; }
+
 .alert {
   margin-top: 0;
   padding: 10px;
@@ -66,8 +77,8 @@
 .detail {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 400px 25px 400px;
-  grid-template-columns: 400px 25px 400px; }
+  -ms-grid-columns: 500px 25px 500px;
+  grid-template-columns: 500px 25px 500px; }
 
 .detail__title {
   margin: 0 0 20px 0;

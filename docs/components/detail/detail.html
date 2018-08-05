@@ -166,6 +166,23 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"detail"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"detail__main"</span>&gt;</span>
         <span class="hljs-comment">&lt;!-- Start: component HTML --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action-list"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action-list__title"</span>&gt;</span>Our heroes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action-list__list"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action-list__item"</span>&gt;</span>Hank McCoy: hank.mccoy@xmen.com<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action-list__item"</span>&gt;</span>Cyclops: cyclops@xmen.com<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action-list__item"</span>&gt;</span>Wolverine: claws@xmen.com<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- End: component HTML --&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Start: component scripts --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- End: component scripts --&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- Start: component HTML --&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"movie-list"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"movie-list"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cellspacing</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"movie-list__table"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
@@ -246,6 +263,7 @@
             });
         </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
         <span class="hljs-comment">&lt;!-- End: component scripts --&gt;</span>
+
         <span class="hljs-comment">&lt;!-- Start: component HTML --&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-alert"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert--warning"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__title"</span>&gt;</span>This is your final warning<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
@@ -273,7 +291,6 @@
             });
         </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
         <span class="hljs-comment">&lt;!-- End: component scripts --&gt;</span>
-
     <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
@@ -323,14 +340,16 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"detail"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"detail__main"</span>&gt;</span>        
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"detail__main"</span>&gt;</span>  
+        </span><span class="hljs-template-variable">{{ render '@<span class="hljs-builtin-name">action</span>-list' }}</span><span class="xml">
+
         </span><span class="hljs-template-variable">{{ render '<a href="movie-list.html">@movie-list</a>' }}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"detail__side"</span>&gt;</span>
         </span><span class="hljs-template-variable">{{ render '<a href="alert.html">@alert</a>' }}</span><span class="xml">
-        </span><span class="hljs-template-variable">{{ render '<a href="alert.html">@alert</a>--warning' }}</span><span class="xml">
-        
+
+        </span><span class="hljs-template-variable">{{ render '<a href="alert.html">@alert</a>--warning' }}</span><span class="xml">        
     <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
@@ -385,7 +404,7 @@
 
 <span class="hljs-selector-class">.detail</span> {
     @<span class="hljs-keyword">include</span> display-grid;
-    @<span class="hljs-keyword">include</span> grid-template-columns(<span class="hljs-number">400px</span> 25px 400px);
+    @<span class="hljs-keyword">include</span> grid-template-columns(<span class="hljs-number">500px</span> 25px 500px);
 }
 
 <span class="hljs-comment">// ---------------------------------------------</span>
@@ -481,8 +500,10 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(5)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(6)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
+            
+                <a href="action-list.html">@<span>action-list</span></a>, 
             
                 <a href="movie-list.html">@<span>movie-list</span></a>, 
             
@@ -562,6 +583,30 @@
 <div class="Tree" data-behaviour="tree" id="tree-components">
     <h3 class="Tree-title">components</h3>
     <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="action-list.html" data-pjax>
+                <span>Action List</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
         
     
         
