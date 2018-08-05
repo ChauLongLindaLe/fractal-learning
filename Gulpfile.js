@@ -38,6 +38,11 @@ gulp.task('watch', ['sass', 'js'], function () {
     ], ['js']);
 });
 
+gulp.task('copyCname', function() {
+    return gulp.src('CNAME')
+        .pipe(gulp.dest('./docs'))
+});
+
 function customPlumber(errTitle) {
     return plumber({
         errorHandler: notify.onError({
