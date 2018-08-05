@@ -30,6 +30,12 @@
     }
 }
 
+.movie-list__footnote {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: map-get($colors, 01);
+}
+
 // ---------------------------------------------
 // Modifier
 // ---------------------------------------------
